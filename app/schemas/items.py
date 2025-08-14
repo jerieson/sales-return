@@ -30,7 +30,7 @@ class ItemBase(BaseModel):
     nsmemail: Optional[str] = Field(None, max_length=50)
     gsmemail: Optional[str] = Field(None, max_length=50)
     fspemail: Optional[str] = Field(None, max_length=50)
-    issdo: Optional[int] = None
+    is_sdo: Optional[int] = None
 
 
 class ItemCreate(ItemBase, TimestampMixin):
@@ -56,7 +56,7 @@ class ItemUpdate(BaseModel):
 
 
 class ItemResponse(ItemBase, TimestampMixin):
-    pk_sritems_id: int
+    pk_sr_items_id: int
     fk_sr_action_of_type: Optional[int] = None
 
     # Related objects

@@ -40,7 +40,7 @@ class HeaderBase(BaseModel):
     total_tat: Optional[int] = None
     approval_tat: Optional[int] = None
     remarks_return: Optional[str] = Field(None, max_length=225)
-    chanel: Optional[int] = None
+    channel: Optional[int] = None
 
 
 class HeaderCreate(HeaderBase, TimestampMixin):

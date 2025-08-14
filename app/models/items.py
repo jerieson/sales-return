@@ -7,7 +7,7 @@ from .base import Base
 class SRFctItems(Base):
     __tablename__ = "sr_fct_items"
 
-    pk_sritems_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    pk_sr_items_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     appkey = Column(
         String(255), ForeignKey("sr_fct_header.appkey"), nullable=False, index=True
     )
@@ -36,7 +36,7 @@ class SRFctItems(Base):
     nsmemail = Column(String(50))
     gsmemail = Column(String(50))
     fspemail = Column(String(50))
-    issdo = Column(Integer)
+    is_sdo = Column(Integer)
 
     # Relationships to parent and child tables
     header = relationship("SRFctHeader", back_populates="items")

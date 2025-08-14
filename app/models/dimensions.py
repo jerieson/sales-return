@@ -5,9 +5,9 @@ from .base import Base
 
 
 class SRDimTypeApprstat(Base):
-    __tablename__ = "sr_dim_typeapprstat"
+    __tablename__ = "sr_dim_type_of_approval_status"
 
-    pk_sr_typeapprstat_id = Column(
+    pk_sr_type_of_approval_status_id = Column(
         Integer, primary_key=True, index=True, autoincrement=True
     )
     isactive = Column(Integer)
@@ -66,7 +66,7 @@ class DimCustomDropdown(Base):
     # Relationship to items
     items_action_type = relationship(
         "SRFctItems",
-        foreign_keys="SRFctItems.fk_sr_actiontype",
+        foreign_keys="SRFctItems.fk_sr_action_of_type",
         back_populates="action_type",
     )
 

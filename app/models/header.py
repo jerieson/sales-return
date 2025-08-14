@@ -46,7 +46,7 @@ class SRFctHeader(Base):
     total_tat = Column(Integer)
     approval_tat = Column(Integer)
     remarks_return = Column(String(225))
-    chanel = Column(Integer)
+    channel = Column(Integer)
 
     # Relationships to child tables
     items = relationship(
